@@ -1,0 +1,31 @@
+.titulo {text-align:center;
+        margin:30px 0px;}
+
+
+.menu { margin:50px 0px 0px;
+        padding:0;
+        list-style-type: none;
+        width:18%;
+        height:480px;
+        background-color:rgb(224, 224, 218);
+        text-align:center;
+        border:1px solid rgb(127, 248, 182);
+        border-top:none;}
+
+.menu button {  text-decoration:none;
+                border:0px;
+                color:rgb(75, 199, 131);
+                display:block;
+                padding:2px;
+                width:100%;
+                height:94px;
+                font-size:30px;}
+
+.menu button:hover {    color:rgb(224,224,218);
+                        background-color:rgb(75,199,131);
+                        font-size:35px;
+                        cursor:pointer;}
+
+li {   border:1px solid rgb(75, 199, 131);
+        }
+
