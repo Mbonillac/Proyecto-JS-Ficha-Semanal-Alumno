@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/estilo.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -10,44 +11,37 @@
     <title>FSA-FCT</title>
 </head>
 <body>
+
     <div id="cabecera">
         <img src="./img/logo.jpg" alt="logo" id="logo">
         <h1 class="titulo">Ficha De Trabajo Semanal</h1>
     </div>
 
     <div id="contenido">
-    <div id="principal">
 
-       
+        <div id="principal">
 
-        <div class="menu">
-
-            <button id="bt_alumnos">Alumnos<br><i class='fas fa-book-reader'></i></button>
-            <button id="bt_profesores">Profesores<br><i class='fas fa-chalkboard-teacher'></i></button>
-            <button id="bt_empresas">Empresas<br><i class='fas fa-tv'></i></button>
-            <button id="bt_asignaciones">Asignaciones<br><i class='fas fa-handshake'></i></button>
-            <button id="bt_ficha_semanal">Ficha Semanal<br><i class='fas fa-address-card'></i></button>
-   
-        </div>
-        <div class="menu_añadir">
-
-            <button id="bt_nuevo_alumno"><i class='fa fa-plus-circle'></i></button>
-            <button id="bt_nuevo_profesor"><i class='fas fa-plus-circle'></i></button>
-            <button id="bt_nuevo_empresa"><i class='fa fa-plus-circle'></i></button>
-            <button id="bt_nuevo_asignaciones"><i class='fa fa-plus-circle'></i></button>
-            <button id="bt_nuevo_ficha_semanal"><i class='fa fa-plus-circle'></i></button>
-   
-        </div>
-    </div>
-
-        <!--botones awesome
-        <i class='fa fa-user-plus'></i>
-        <i class='fas fa-plus'></i>
-        <i class='fa fa-plus-circle'></i>
-        <i class='fa fa-plus-square'></i>
-        <i class='fa fa-plus-square-o'></i>
         
-        -->
+
+            <div class="menu">
+
+                <button id="bt_alumnos">Alumnos<br><i class='fas fa-book-reader'></i></button>
+                <button id="bt_profesores">Profesores<br><i class='fas fa-chalkboard-teacher'></i></button>
+                <button id="bt_empresas">Empresas<br><i class='fas fa-tv'></i></button>
+                <button id="bt_asignaciones">Asignaciones<br><i class='fas fa-handshake'></i></button>
+                <button id="bt_ficha_semanal">Ficha Semanal<br><i class='fas fa-address-card'></i></button>
+    
+            </div>
+            <div class="menu_añadir">
+
+                <button id="bt_nuevo_alumno"><i class='fa fa-plus-circle'></i></button>
+                <button id="bt_nuevo_profesor"><i class='fas fa-plus-circle'></i></button>
+                <button id="bt_nuevo_empresa"><i class='fa fa-plus-circle'></i></button>
+                <button id="bt_nuevo_asignaciones"><i class='fa fa-plus-circle'></i></button>
+                <button id="bt_nuevo_ficha_semanal"><i class='fa fa-plus-circle'></i></button>
+    
+            </div>
+        </div>
 
         <div class="centro">
         
@@ -57,6 +51,56 @@
 
     <div id="pie">
         
-</div>
+    </div>
+<!--Formulario para la entrada de datos de las ventanas modales-->
+
+    <!--Datos profesores (Nombre, Apellidos)-->
+    <form action="" class="formulario">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre"  >
+        <br>
+        <label for="apellido">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" >
+        <br>
+        
+
+    <!--Más  Datos para Empresa (Direccion,Pag.web,Persona de contacto,Télefono,E-mail,Tutor laboral)-->
+        <label for="direccion">Dirección:</label>
+        <input type="text" name="direccion" id="direccion" maxlength="60" minlength="7" >
+        <br>
+        <label for="web">Página Web:</label>
+        <input type="text" name="web" id="web">
+        <br>
+        <label for="persona-contacto">Persona Contacto: </label>
+        <input type="text" name="persona_contacto" id="persona_contacto"  >
+        <br>
+        <label for="telefono" class="tele">Teléfono:</label>
+        <input type="tel"   name="telefono" id="telefono" minlength="9" maxlength="14">
+        <br>
+        <label for="e-amail">E-mail:</label>
+        <input type="email" name="email" id="email" title="Introduzca correo" placeholder="correo@electronico.com">
+        <br>
+        <label for="tutor_laboral">Tutor Laboral: </label>
+        <input type="text" name="tutor_laboral" id="tutor_laboral" >
+
+    <!--Más datos para Alumno (Curso, Ciclo)-->
+        
+        <br>
+        <label for="ciclo">Ciclo:</label>
+        <select name="ciclo" id="ciclo">
+            <option value="asir">Técnico en Administración de Sistemas Informáticos en Red</option>
+            <option value="dam">Técnico en Desarrollo de Aplicaciones Multiplataforma</option>
+            <option value="daw">Técnico en Desarrollo de Aplicaciones Web</option>
+        </select>
+        <br>
+        <label for="curso">Curso:</label>
+        <select name="curso" id="curso">
+            <option value="medio">Grado Medio</option>
+            <option value="superior">Grado Superior</option>
+        </select>
+    </form>
+
+<!--Fin formulario------------------------------------------------------------------------------------->
 </body>
 </html>
