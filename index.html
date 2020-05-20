@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manuel Bonilla Campos">
+    <meta name="description" content="Instituto_ficha_practicas_formacion_centro_trabajo_Junta_de_Andalucia">
+    <meta name="keywords" content="alumnos, profesores, asignaciones, empresas, ficha, practicas, rellenar, horas_practicas, laboral">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/estilo.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="./js/script.js"></script>
-    <title>FSA-FCT</title>
+    
+    
+    
+    <title>Ficha De Trabajo Semanal - FCT -</title>
 </head>
 <body>
-
+<header>
     <div id="cabecera">
         <img src="./img/logo.jpg" alt="logo" id="logo">
-        <h1 class="titulo">Ficha De Trabajo Semanal</h1>
+        <div class="titulos">
+        <h1 class="titulo1">Ficha De Trabajo Semanal</h1>
+        
+        <h2 class="titulo2">Formacion Centro Trabajo</h2>
     </div>
-
+    </div>
+</header>
     <div id="contenido">
 
         <div id="principal">
@@ -42,56 +51,121 @@
     
             </div>
         </div>
-
+<!--Div desde el cual se mostraran las distintas tablas-->
         <div class="centro">
-        
+
+            <div id="paraAlumnos">
+            <table id="tabla_alumnos">
+                <thead>
+                    <caption>Alumnos</caption>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Ciclo</th>
+                    <th>Curso</th>
+                </thead>
+                <tfoot></tfoot>
+            </table>
+            </div>
+
+            <div id="paraProfesores">
+            <table id="tabla_profesores">
+                <thead>
+                    <caption>Profesores</caption>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                </thead>
+               
+                <tfoot></tfoot>
+            </table>
+            </div>
+
+            <div id="paraEmpresas">
+                <table id="tabla_empresas">
+                    <thead>
+                        <caption>Empresas</caption>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Web</th>
+                        <th>Persona Contacto</th>
+                        <th>Teléfono</th>
+                        <th>E-Mail</th>
+                        <th>Tutor Laboral</th>
+                    </thead>
+                    <tfoot></tfoot>
+                </table>
+                </div>
+
+                <div id="paraAsignaciones">
+                    <table id="tabla_asignaciones">
+                        <thead>
+                            <caption>Asignaciones</caption>
+                            <th>Nombre y Apellidos Alumno/a</th>
+                            <th>Nombre Empresa</th>
+                            <th>Tutor Laboral</th>
+                            <th>Tutor Docente</th>
+                            <th>Inicio Prácticas</th>
+                            <th>Fin Prácticas</th>
+                        </thead>
+                        <tfoot></tfoot>
+                    </table>
+                    </div>
+
+            <div id="paraFichaSemanal">
+                <div id="alumnoEnPracticas"></div>
+                    <div id="datosDePracticas">
+                        <div id="datosCEducativo"></div>
+                            <div id="datosCLaboral"></div>
+                                <div id="contenedorTabla">
+                                    <table id="tabla_fichasemanal">
+                                        <caption>Ficha Semanal Alumno</caption>
+                                        <thead>
+                                            <th></th>
+                                            <th></th>
+                                        </thead>
+                                        <tfoot></tfoot>
+                                    </table>
+                                </div>
+                            
+                        </div>
+                        
+                        </div>
         </div>
 
     </div>
 
-    <div id="pie">
+    <footer>
+        <div class="pie">
+                <a href="https://www.google.es/maps/place/I.E.S.+Rodrigo+Caro/@37.2898073,-6.0519577,17z/data=!3m1!4b1!4m5!3m4!1s0xd1272c0fd9532c3:0xfca5c5392ec604dd!8m2!3d37.2898073!4d-6.049769">Calle Instituto 2 <br> 41100 Coria del Río <br> Sevilla</a>
+                <p>987654321 <br> 678912345</p>
+                <a href="mailto:correoinstituto@jmail.es">correoinstituto@jmail.es</a>
         
-    </div>
-<!--Formulario para la entrada de datos de las ventanas modales-->
+        <div class="imagen">
+            <img src="./img/logo-edu.jpg" alt="logojunta" title="logoJunta">
+         </div>
+        </div>
+    </footer>
 
-    <!--Datos profesores (Nombre, Apellidos)-->
-    <form action="" class="formulario">
+    
 
+<!--Ventana modal Nuevo Alumno-------------------------------------------------------------------------->   
+<div id="ventana_modal_nalumno">
+    <div class="contenido_modal">
+    <div class="modal_alumno">
+        <form>
+        <span class="cerrarAlumno">&times;</span>
+        <h2>Datos nuevo alumno:</h2>
+        
         <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" id="nombre"  >
+        <input type="text" name="nombre" id="nombreDeAlumno" required minlength="1" >
         <br>
         <label for="apellido">Apellidos:</label>
-        <input type="text" name="apellidos" id="apellidos" >
-        <br>
-        
-
-    <!--Más  Datos para Empresa (Direccion,Pag.web,Persona de contacto,Télefono,E-mail,Tutor laboral)-->
-        <label for="direccion">Dirección:</label>
-        <input type="text" name="direccion" id="direccion" maxlength="60" minlength="7" >
-        <br>
-        <label for="web">Página Web:</label>
-        <input type="text" name="web" id="web">
-        <br>
-        <label for="persona-contacto">Persona Contacto: </label>
-        <input type="text" name="persona_contacto" id="persona_contacto"  >
-        <br>
-        <label for="telefono" class="tele">Teléfono:</label>
-        <input type="tel"   name="telefono" id="telefono" minlength="9" maxlength="14">
-        <br>
-        <label for="e-amail">E-mail:</label>
-        <input type="email" name="email" id="email" title="Introduzca correo" placeholder="correo@electronico.com">
-        <br>
-        <label for="tutor_laboral">Tutor Laboral: </label>
-        <input type="text" name="tutor_laboral" id="tutor_laboral" >
-
-    <!--Más datos para Alumno (Curso, Ciclo)-->
-        
+        <input type="text" name="apellidos" id="apellidosDeAlumno" >
         <br>
         <label for="ciclo">Ciclo:</label>
         <select name="ciclo" id="ciclo">
-            <option value="asir">Técnico en Administración de Sistemas Informáticos en Red</option>
-            <option value="dam">Técnico en Desarrollo de Aplicaciones Multiplataforma</option>
-            <option value="daw">Técnico en Desarrollo de Aplicaciones Web</option>
+            <option value="ASIR">Técnico en Administración de Sistemas Informáticos en Red</option>
+            <option value="DAM">Técnico en Desarrollo de Aplicaciones Multiplataforma</option>
+            <option value="DAW">Técnico en Desarrollo de Aplicaciones Web</option>
         </select>
         <br>
         <label for="curso">Curso:</label>
@@ -99,8 +173,116 @@
             <option value="medio">Grado Medio</option>
             <option value="superior">Grado Superior</option>
         </select>
+        <br>
+        <button id="guardarAlumno" onclick="guardarNuevoAlumno();" type="reset">Añadir</button>
     </form>
+</div>
+      
+    </div>
+</div>
 
-<!--Fin formulario------------------------------------------------------------------------------------->
+ <!--Ventana modal Nuevo Profesor--------------------------------------------------------------------------------->   
+    <div id="ventana_modal_nprofesor">
+        <div class="contenido_modal"> 
+        <div  class="modal_profesor">
+            <form>
+            <span class="cerrarProfesor">&times;</span>
+            <h2>Datos nuevo profesor:</h2>
+            
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombreProfesor" id="nombreDeProfesor"  >
+            <br>
+            <label for="apellido">Apellidos:</label>
+            <input type="text" name="apellidosProfesor" id="apellidosDeProfesor" >
+            <br>
+            
+            <button id="guardarProfesor" onclick="guardarNuevoProfesor();" type="reset">Añadir</button>
+        </form>
+        </div>
+    </div>
+    </div>
+
+<!--Ventana modal nueva Empresa------------------------------------------------------------------------------------>
+    <div id="ventana_modal_nempresa">
+        <div class="contenido_modal">
+        <div  class="modal_empresa">
+            <form>
+            <span class="cerrarEmpresa">&times;</span>
+            <h2>Datos nueva empresa:</h2>
+            
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombreDeEmpresa"  >
+            <br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" name="direccion" id="direccionDeEmpresa" maxlength="60" minlength="7" >
+            <br>
+            <label for="web">Página Web:</label>
+            <input type="text" name="web" id="web">
+            <br>
+            <label for="persona-contacto">Persona Contacto: </label>
+            <input type="text" name="persona_contacto" id="personaDecontacto"  >
+            <br>
+            <label for="telefono" class="tele">Teléfono:</label>
+            <input type="tel"   name="telefono" id="telefono" minlength="9" maxlength="14">
+            <br>
+            <label for="e-amail">E-mail:</label>
+            <input type="email" name="email" id="email" title="Introduzca correo" >
+            <br>
+            <label for="tutor_laboral">Tutor Laboral: </label>
+            <input type="text" name="tutor_laboral" id="tutorLaboral" >
+            <br>
+            
+            <button id="enviar" onclick="guardarNuevoEmpresa();" type="reset">Añadir</button>
+        </form>
+        </div>
+    </div>
+    </div>
+
+<!--Ventana modal nueva Asignación--------------------------------------------------------------------------------->
+    <div id="ventana_modal_nasignacion">
+        <div class="contenido_modal">
+        <div class="modal_asignacion">
+            <form>
+            <span class="cerrarAsignacion">&times;</span>
+            <h2>Datos nueva asignacion:</h2>
+
+            <label for="nombre">Nombre y Apellidos Alumno: </label>
+            <input type="text" name="nombre" id="nombreyapellidos" >
+            <br>
+            <label for="nombre">Nombre Empresa: </label>
+            <input type="text" name="nombre_empresa" id="nombre_empresa" >
+            <br>
+            <label for="tutor_laboral">Nombre Tutor Laboral: </label>
+            <input type="text" name="tutor_laboral" id="tutor_laboral" >
+            <br>
+            <label for="tutor_laboral">Tutor Docente: </label>
+            <input type="text" name="tutor_docente" id="tutor_docente" >
+            <br>
+            
+                <legend>Prácticas</legend>
+                <label for="" class="inicio_practicas">Inicio:</label>
+                <input type="date" id="fecha_inicio">
+                <br>
+                <label for="" class="fin_practicas">Fin:</label>
+                <input type="date" id="fecha_fin">
+            
+            <button id="enviar" onclick="guardarNuevoAsignacion();" type="reset">Añadir</button>
+        </form>
+        </div>
+    </div>
+    </div>
+    <!--Ventana modal De Aviso de Registro-------------------------------------------------------------------------------------->
+    <div id="aviso">
+        <div id="modalDelRegistro">
+            <div id="registroRealizado">
+                <span>El registro se ha realizado correctamente.</span>
+            </div>
+        </div>
+    </div>
+
+<script src="./js/script.js"></script>
+
+
+
 </body>
 </html>
